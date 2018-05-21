@@ -15,7 +15,13 @@ app.use(logger("dev"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/mongoscraperDB");
+mongoose.connect(config.database)
+.then(() => {
+  console.log("Connected to MongoDB database");
+})
+.catch(err => {
+  console.log("There was an error connecting to mongoDB database:" + err);
+});
 
 /****************LOAD MODELS ******************/
 const db = require("./models");
@@ -105,7 +111,7 @@ app.get("/articles/:id", function(req, res) {
     });
 });
 
-app.post("/saved/:id", function(req, res) {
+app.post("/index/:id", function(req, res) {
   // Use the article id to find and update its saved boolean
   db.Article.findOneAndUpdate({ "_id": req.params.id }, { "saved": true})
   // Execute the above query
