@@ -1,0 +1,13 @@
+body {
+    background-color: #eee;
+}
+
+.jumbotron {
+    background-color: white;
+    background-image:url("../img/ufcbanner.jpg");
+    background-size: 100% 100%;
+}
+
+.navbar {
+    background-color: #1a8cff !important;
+}
