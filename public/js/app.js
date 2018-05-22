@@ -9,7 +9,7 @@ $("#scrapeArticles").on("click", function(e) {
                                         <div class="card-body">
                                             <h3 class="card-title" data-id="${data[i]._id}"> ${data[i].title}</h3>
                                             <h3>Article Link:<a href="${data[i].link}"> ${data[i].link}</a></h3>
-                                            <p class="card-text">Article Content Here.</p>
+                                            <p class="card-text"><strong>Summary: </strong>${data[i].summary}</p>
                                             <button type="button" id="saveBtn" data-id="${data[i]._id}" class="btn btn-primary">Save Article</button>
                                         </div>
                                     </div>`);
