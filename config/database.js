@@ -1,3 +1,3 @@
 module.exports = {
-    database: process.env.MONGOLAB_WHITE_URI || "mongodb://localhost/mongoscraperDB"
+    database: process.env.MONGOLAB_ROSE_URI || "mongodb://localhost/mongoscraperDB"
 }
