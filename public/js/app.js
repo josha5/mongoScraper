@@ -50,3 +50,7 @@ $(document).on("click", "#deleteArticleBtn", function() {
         })
 });
 
+$(document).on("click", "#saveBtn", function() {
+    alert("article saved");
+});
+
